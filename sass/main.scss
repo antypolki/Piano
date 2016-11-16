@@ -1,0 +1,93 @@
+@import "modules/variables";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/bodysection";
+@import "modules/mixins";
+
+
+* {
+ box-sizing: border-box;
+}
+.buttonStyle {
+  padding: 10px 30px;
+  cursor: pointer;
+  color: black;
+  letter-spacing: 1px;
+  text-shadow: 0 0 1px #000;
+  border: 3px dashed gray;
+  background: #fbdbc2;
+  float: none;
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+}
+.body {
+  background-image: url("../images/piano.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+    .instruction {
+  border-radius: 1em;
+  background: white;
+  opacity: .95;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  .container {
+    padding: 2em;
+  }
+  .header {
+    text-align: center;
+  }
+  .main {
+    text-align: justify;
+  }
+  .change {
+    .button{
+      @extend .buttonStyle;
+    }
+  }
+  }
+}
+
+
+.piano {
+  background: white;
+  opacity: .95;
+  border-radius: 1em;
+  width: 80%;
+  margin: 0 auto;
+  .list{
+
+  }
+  .box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: white;
+    opacity: .95;
+    height: 25rem;
+    width: 80%;
+    margin: 0 auto;
+
+  .key {
+    width: 3rem;
+    height: 10rem;
+    border: 0.1rem solid black;
+    background: white;
+    display: inline-block;
+  }
+}
+.showInstruction {
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+  padding: 2em 0;
+  border-radius: 0 0 1em 1em;
+  opacity: .95;
+  .button {
+    @extend .buttonStyle;
+  }
+}
+
+}
