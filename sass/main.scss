@@ -9,17 +9,26 @@
  box-sizing: border-box;
 }
 .buttonStyle {
-  padding: 10px 30px;
+
   cursor: pointer;
   color: black;
   letter-spacing: 1px;
   text-shadow: 0 0 1px #000;
   border: 3px dashed gray;
-  background: #fbdbc2;
+  background: $pink;
   float: none;
   margin-left:auto;
   margin-right:auto;
   display: block;
+  padding: 10px 30px;
+
+}
+.backgroundstyle {
+
+  background: white;
+  opacity: .95;
+  width: 80%;
+  margin: 0 auto;
 }
 .body {
   background-image: url("../images/piano.jpg");
@@ -27,12 +36,9 @@
   background-size: cover;
 
     .instruction {
+  @extend .backgroundstyle;
   border-radius: 1em;
-  background: white;
-  opacity: .95;
-  width: 80%;
-  height: 80%;
-  margin: 0 auto;
+
   .container {
     padding: 2em;
   }
@@ -49,26 +55,16 @@
   }
   }
 }
-
-
 .piano {
-  background: white;
-  opacity: .95;
+  @extend .backgroundstyle;
   border-radius: 1em;
-  width: 80%;
-  margin: 0 auto;
-  .list{
 
-  }
   .box{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background: white;
-    opacity: .95;
-    height: 25rem;
-    width: 80%;
-    margin: 0 auto;
+    @extend .backgroundstyle;
+    height: 20rem;
 
   .key {
     width: 3rem;
@@ -76,18 +72,16 @@
     border: 0.1rem solid black;
     background: white;
     display: inline-block;
+
   }
 }
 .showInstruction {
-  width: 80%;
-  margin: 0 auto;
-  background: white;
+  @extend .backgroundstyle;
   padding: 2em 0;
   border-radius: 0 0 1em 1em;
-  opacity: .95;
+
   .button {
     @extend .buttonStyle;
   }
 }
-
 }
