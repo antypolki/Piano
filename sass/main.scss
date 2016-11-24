@@ -8,6 +8,41 @@
 * {
  box-sizing: border-box;
 }
+
+
+.test {
+  width: 80%;
+  margin: 0 auto;
+}
+.nav-ul {
+    display:flex;
+    list-style-type: none;
+    background: #0f0f0f;
+    border-radius: 1em;
+    opacity: .8;
+}
+
+.nav-li {
+    flex: 1;
+}
+
+.nav-a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.hidden-btn, .hidden-nav {
+    display: none;
+}
+
+.nav-mobile {
+    .nav-a{
+        padding:1.2em 1em;
+            display: block;
+    }
+}
+
 .buttonStyle {
 
   cursor: pointer;
@@ -20,7 +55,7 @@
   margin-left:auto;
   margin-right:auto;
   display: block;
-  padding: 10px 30px;
+  padding: 1em 5em;
 
 }
 .backgroundstyle {
@@ -84,4 +119,10 @@
     @extend .buttonStyle;
   }
 }
+}
+.curr {
+  background: #c7f9e0 !important;
+}
+.error {
+  background: red !important;
 }
