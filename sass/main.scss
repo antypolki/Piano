@@ -126,3 +126,7 @@
 .error {
   background: red !important;
 }
+.choice {
+  @extend .buttonStyle;
+  padding: 1em;
+}

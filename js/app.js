@@ -10,8 +10,6 @@ console.log('DOM');
   // var twinkle = ['two' ,'two', 'six' ,'six', 'seven' ,'seven', 'six' ,'five' ,'five' ,'four' ,'four', 'three', 'three' ,'two' , 'six' ,'six' ,'five', 'five', 'three', 'three', 'two' ,'six' ,'six', 'five' ,'five', 'four' ,'four' 'three' ,'two' ,'two', 'six', 'six', 'seven', 'seven' ,'six', 'five', 'five', 'four', 'four', 'three', 'three', 'two']
 
     var index = 0;
-
-
     var btn = $('.music');
 
     btn.on('click', function () {
@@ -62,14 +60,15 @@ console.log('DOM');
       }
 
 
-
     });
 
     var index2 = 0;
     var btn2 = $('.music2');
 
     btn2.on('click', function () {
+      console.log('dziala');
       if ($(this).hasClass('active')) {
+        console.log($(this).hasClass('active'));
         $(this).removeClass('active');
         $(this).text('start');
         index2 = 0;
@@ -78,8 +77,8 @@ console.log('DOM');
 
       } else {
 
-        var div = $('.'+ softKitty[index2][0]);
-        div.addClass('curr');
+        var div2 = $('.'+ softKitty[index2][0]);
+        div2.addClass('curr');
         $(this).addClass('active');
         $(this).text('reset');
       }
@@ -90,8 +89,9 @@ console.log('DOM');
     $('main').on('click', '.key', function () {
       if (btn2.hasClass('active')) {
         if ($(this).hasClass('curr')) {
-          var div = $('.'+ softKitty[index2][0]);
-          div.removeClass('curr');
+
+          var div2 = $('.'+ softKitty[index2][0]);
+          div2.removeClass('curr');
           ++index2;
           if (index2<softKitty.length) {
             setTimeout(function () {
